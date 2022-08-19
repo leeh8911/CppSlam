@@ -9,6 +9,15 @@ set(TEST_NAME CPP_SLAM_TEST)
 set(CMAKE_CXX_FLAGS "-std=c++14")
 set(CMAKE_CXX_STANDARD 14)
 
+find_program(CLANGTIDY clang-tidy)
+if(CLANGTIDY)
+message(STATUS "activate clang-tidy")
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+set(CMAKE_CXX_CLANG_TIDY "${CLANGTIDY};-extra-arg=-Wno-unknown-warning-option;-header-filter=${CMAKE_SOURCE_DIR}/src/*;-fix")
+else()
+message(SEND_ERROR "clang-tidy requested but executable not found")
+endif()
+
 add_subdirectory(src)
 
 add_subdirectory(test)

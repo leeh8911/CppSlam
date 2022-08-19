@@ -1,6 +1,6 @@
-#ifndef SRC_HELLO_H
-#define SRC_HELLO_H
+#ifndef _DEVELOP_SRC_HELLO_H
+#define _DEVELOP_SRC_HELLO_H
 
-void call_hello(void);
+void CallHello();
 
-#endif  //  SRC_HELLO_H
+#endif // _DEVELOP_SRC_HELLO_H

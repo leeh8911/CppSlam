@@ -3,7 +3,7 @@ all: format test build debug static-test clean
 
 .PHONY: format
 format:
-	clang-format src/*.h src/*.cpp test/*.cpp -i
+	clang-format src/*.h src/*.cpp test/*.cpp -i && \
 
 .PHONY: build
 build:

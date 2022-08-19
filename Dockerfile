@@ -25,6 +25,8 @@ RUN apt-get install -qq -y libtool
 RUN apt-get install -qq -y g++ 
 RUN apt-get install -qq -y cmake
 RUN apt-get install -qq -y git
+RUN apt-get install -qq -y clang-format-10
+RUN apt-get install -qq -y clang-tidy
 # BLAS & LAPACK
 RUN apt-get install -qq -y libatlas-base-dev
 # Eigen3
@@ -49,3 +51,8 @@ RUN cmake ..
 RUN make -j $NUM_CORES
 RUN make test
 RUN make install
+
+WORKDIR /usr/src/gtest
+RUN cmake CMakeLists.txt
+RUN make
+RUN cp *.a/usr/lib
