@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.11.3)
 
-project(CPP_SLAM)
+project(AUTONOMOUS_DRIVING_FRAMEWORK)
 
-set(PROJECT_NAME CPP_SLAM)
-set(TEST_NAME CPP_SLAM_TEST)
+set(PROJECT_NAME AUTONOMOUS_DRIVING_FRAMEWORK)
+set(TEST_NAME AD_TEST)
 
 # Set the C++ standard we will use
 set(CMAKE_CXX_FLAGS "-std=c++14")

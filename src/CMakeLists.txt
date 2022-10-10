@@ -11,8 +11,6 @@ find_package(Python3 REQUIRED)
 
 target_include_directories(${PROJECT_NAME} PUBLIC
     ${CMAKE_SOURCE_DIR}
-    ${CMAKE_SOURCE_DIR}/src
-    ${CMAKE_SOURCE_DIR}/includes
 )
 
 if ( CMAKE_COMPILER_IS_GNUCC )

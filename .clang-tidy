@@ -2,6 +2,7 @@ Checks: '
 -*,
 clang-diagnostic-*,
 llvm-*,
+-llvm-header-guard,
 misc-*,
 -misc-const-correctness,
 -misc-unused-parameters,
@@ -57,6 +58,8 @@ CheckOptions:
   # throughout the code base.
   - key:             readability-identifier-naming.FunctionIgnoredRegexp
     value:           "LLVMFuzzerTestOneInput"
+  - key:             readability-identifier-naming.MemberCase
+    value:           snake_case
   - key:             readability-identifier-naming.MemberCase
     value:           snake_case
   - key:             readability-identifier-naming.ParameterCase

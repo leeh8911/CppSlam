@@ -3,6 +3,6 @@
 ```terminal
 wsl
 
-docker build -t cpp-slam .
-docker run -it --rm -v ${PWD}:/develop cpp-slam
+docker build -t adf-image .
+docker run -it --rm -v ${PWD}:/develop adf-image
 ```

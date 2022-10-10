@@ -15,7 +15,6 @@ target_link_libraries(
 )
 
 target_include_directories(${TEST_NAME} PUBLIC
-"${CMAKE_SOURCE_DIR}/includes"
 "${CMAKE_SOURCE_DIR}")
 
 include(GoogleTest)

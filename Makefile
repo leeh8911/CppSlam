@@ -18,7 +18,7 @@ test:
 	cd build && \
 	cmake .. && \
 	make &&\
-	test/CPP_SLAM_TEST
+	test/AD_TEST
 
 .PHONY: debug
 debug:

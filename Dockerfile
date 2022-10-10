@@ -52,7 +52,6 @@ RUN make -j $NUM_CORES
 RUN make test
 RUN make install
 
-WORKDIR /usr/src/gtest
-RUN cmake CMakeLists.txt
-RUN make
-RUN cp *.a/usr/lib
+RUN cd /usr/src/googletest && \
+    cmake . && \
+    cmake --build . --target install
